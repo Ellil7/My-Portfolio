@@ -1,3 +1,19 @@
+/* Make navbar text and links white for contrast */
+.navbar .navbar-brand,
+.navbar .navbar-nav .nav-link {
+	color: var(--white) !important;
+}
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:focus,
+.navbar .navbar-nav .nav-link:hover {
+	color: var(--coral) !important;
+}
+/* Balanced spacing for navbar */
+.navbar {
+		margin-top: 20px;
+		margin-bottom: 20px;
+		background: var(--sage) !important;
+}
 /* Ensure placeholder text uses the main font */
 .ask-input::placeholder, .ask-message::placeholder {
 	font-family: var(--main-font);
@@ -63,22 +79,23 @@
 
 /* Color palette using CSS variables */
 :root {
-		--black: #000000;
-		--dark-gray: #3D3D3D;
-		--sage: #739169;
-		--white: #FFFFFF;
-		--coral: #FF7F7F;
-		--beige: #F2EFE9;
-		--main-font: 'Segoe UI', Arial, sans-serif;
+			--black: #000000;
+			--dark-gray: #3D3D3D;
+			--sage: #739169;
+			--white: #FFFFFF;
+			--coral: #FF7F7F;
+			--beige: #F2EFE9;
+			--main-font: 'Segoe UI', Arial, sans-serif;
+		}
+
 body {
 	font-family: var(--main-font);
+	background: var(--beige);
 }
-}
+/* Removed stray closing brace */
 
 /* About page color styling */
 .about-container {
-	background: linear-gradient(135deg, var(--sage) 0%, var(--white) 100%);
-	box-shadow: 0 4px 24px 0 rgba(61,61,61,0.10);
 	margin-top: 6.5rem;
 	display: flex;
 	flex-direction: column;
@@ -86,8 +103,7 @@ body {
 	justify-content: center;
 	width: 100%;
 	max-width: 600px;
-	margin-left: auto;
-	margin-right: auto;
+	margin: 0 auto;
 	background: var(--white);
 	border-radius: 16px;
 	box-shadow: 0 4px 24px 0 rgba(61,61,61,0.08);
@@ -115,7 +131,7 @@ body {
 	background: var(--sage) !important;
 	color: var(--white) !important;
 	border: 2px solid var(--sage);
-}
+/* Removed stray closing brace */
 }
 
 /* Centering container for main content */
@@ -166,7 +182,12 @@ body {
 
 
 
-.btn {
+
+/* Increase specificity to override Bootstrap */
+.landing-buttons .btn,
+.ask-form .btn,
+.btn-home,
+.about-footer .btn {
 	padding: 0.75rem 2rem;
 	font-size: 1rem;
 	border-radius: 6px;

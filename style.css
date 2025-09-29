@@ -1,3 +1,48 @@
+/* Responsive about page header row */
+.about-header-row {
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+	margin-bottom: 0.2rem;
+	margin-top: 0;
+}
+@media (max-width: 600px) {
+	.about-header-row {
+		justify-content: center;
+		margin-bottom: 0.5rem;
+	}
+	.about-container {
+		padding: 1.2rem 0.5rem;
+		max-width: 100%;
+	}
+	.about-title {
+		font-size: 1.3rem;
+		text-align: center;
+	}
+	.about-text {
+		font-size: 1rem;
+		text-align: center;
+	}
+	.about-footer {
+		padding: 1rem 0 0.7rem 0;
+		font-size: 0.95rem;
+		border-radius: 0 0 10px 10px;
+	}
+	.btn-home-left {
+		position: static;
+		margin: 1rem auto 1rem auto;
+		display: block;
+		width: 100%;
+		max-width: 320px;
+	}
+	.contact-section {
+		flex-direction: column;
+		gap: 0.2rem;
+	}
+	.contact-sep {
+		display: none;
+	}
+}
 /* Navbar only 80% wide and centered, with beige sides */
 .navbar-outer {
 	width: 100%;
@@ -41,8 +86,8 @@
 }
 /* Balanced spacing for navbar */
 .navbar {
-		margin-top: 20px;
-		margin-bottom: 20px;
+	margin-top: 0;
+	margin-bottom: 0;
 		background: var(--sage) !important;
 }
 /* Ensure placeholder text uses the main font */
@@ -127,7 +172,6 @@ body {
 
 /* About page color styling */
 .about-container {
-	margin-top: 6.5rem;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -147,22 +191,20 @@ body {
 }
 
 /* Back to Home button at top left */
-.btn-home-left {
-	position: fixed;
-	top: 2rem;
-	left: 2rem;
-	margin: 0;
-	z-index: 10;
+.btn-home {
 	background: var(--white) !important;
 	color: var(--sage) !important;
 	border: 2px solid var(--sage);
 	box-shadow: 0 2px 8px 0 rgba(61,61,61,0.08);
+	margin-bottom: 1.2rem;
+		margin-left: 0;
 }
-.btn-home-left:hover, .btn-home-left:focus {
+
+
+.btn-home:hover, .btn-home:focus {
 	background: var(--sage) !important;
 	color: var(--white) !important;
 	border: 2px solid var(--sage);
-/* Removed stray closing brace */
 }
 
 /* Centering container for main content */
@@ -171,7 +213,8 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: center;
+	justify-content: flex-start;
+	padding-top: 0.5rem;
 	background: var(--beige);
 }
 

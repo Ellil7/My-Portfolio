@@ -1,0 +1,226 @@
+/* Ensure placeholder text uses the main font */
+.ask-input::placeholder, .ask-message::placeholder {
+	font-family: var(--main-font);
+	color: #888;
+	opacity: 1;
+}
+.ask-message {
+	min-height: 120px;
+	resize: vertical;
+}
+/* Ask Me form styles */
+.ask-form-container {
+	margin-top: 2.5rem;
+	width: 100%;
+	max-width: 500px;
+	background: var(--white);
+	border-radius: 12px;
+	box-shadow: 0 2px 12px 0 rgba(61,61,61,0.06);
+	padding: 2rem 1.5rem 1.5rem 1.5rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.ask-form-title {
+	margin: 0 0 0.5rem 0;
+	color: var(--dark-gray);
+	font-size: 1.4rem;
+	font-weight: 600;
+	text-align: center;
+}
+
+.ask-form-desc {
+	margin: 0 0 1.5rem 0;
+	color: var(--black);
+	font-size: 1rem;
+	text-align: center;
+}
+
+.ask-form {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.ask-input {
+	padding: 0.75rem 1rem;
+	border: 1.5px solid var(--sage);
+	border-radius: 6px;
+	font-size: 1rem;
+	outline: none;
+	transition: border 0.2s;
+}
+.ask-input:focus {
+	border: 1.5px solid var(--coral);
+}
+
+.ask-submit {
+	margin-top: 0.5rem;
+	width: 100%;
+}
+
+/* Color palette using CSS variables */
+:root {
+		--black: #000000;
+		--dark-gray: #3D3D3D;
+		--sage: #739169;
+		--white: #FFFFFF;
+		--coral: #FF7F7F;
+		--beige: #F2EFE9;
+		--main-font: 'Segoe UI', Arial, sans-serif;
+body {
+	font-family: var(--main-font);
+}
+}
+
+/* About page color styling */
+.about-container {
+	background: linear-gradient(135deg, var(--sage) 0%, var(--white) 100%);
+	box-shadow: 0 4px 24px 0 rgba(61,61,61,0.10);
+	margin-top: 6.5rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	max-width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+	background: var(--white);
+	border-radius: 16px;
+	box-shadow: 0 4px 24px 0 rgba(61,61,61,0.08);
+	padding: 2.5rem 2rem;
+}
+
+.about-title {
+	color: var(--dark-gray);
+	letter-spacing: 1px;
+}
+
+/* Back to Home button at top left */
+.btn-home-left {
+	position: fixed;
+	top: 2rem;
+	left: 2rem;
+	margin: 0;
+	z-index: 10;
+	background: var(--white) !important;
+	color: var(--sage) !important;
+	border: 2px solid var(--sage);
+	box-shadow: 0 2px 8px 0 rgba(61,61,61,0.08);
+}
+.btn-home-left:hover, .btn-home-left:focus {
+	background: var(--sage) !important;
+	color: var(--white) !important;
+	border: 2px solid var(--sage);
+}
+}
+
+/* Centering container for main content */
+.center-container {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background: var(--beige);
+}
+
+.landing-main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	max-width: 600px;
+	margin: 0 auto;
+	background: var(--white);
+	border-radius: 16px;
+	box-shadow: 0 4px 24px 0 rgba(61,61,61,0.08);
+	padding: 2.5rem 2rem;
+}
+.about-footer {
+	margin-top: 2.5rem;
+	padding: 1.5rem 0 1rem 0;
+	background: var(--sage);
+	border-radius: 0 0 16px 16px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	width: 100%;
+	color: var(--white);
+}
+
+.landing-buttons {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	gap: 2rem;
+	width: 100%;
+	max-width: 400px;
+}
+
+
+
+
+.btn {
+	padding: 0.75rem 2rem;
+	font-size: 1rem;
+	border-radius: 6px;
+	border: none;
+	cursor: pointer;
+	transition: background 0.2s, color 0.2s;
+	font-weight: 500;
+	text-decoration: none;
+}
+
+.btn-contact {
+	background: var(--sage);
+	color: var(--white);
+}
+.btn-contact:hover {
+	background: var(--coral);
+	color: var(--white);
+}
+
+.btn-about {
+	background: var(--dark-gray);
+	color: var(--white);
+}
+.btn-about:hover {
+	background: var(--black);
+	color: var(--coral);
+}
+
+
+
+.contact-section {
+	font-size: 1.1rem;
+	color: var(--navy);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.contact-link {
+		color: var(--white);
+		text-decoration: none;
+		margin: 0 0.5rem;
+		transition: color 0.2s;
+		font-weight: 500;
+}
+.contact-link:hover,
+.contact-link:focus {
+	color: var(--orange);
+	text-decoration: underline;
+}
+.contact-link:visited {
+		color: var(--dark-gray);
+}
+.contact-link:active {
+	color: var(--orange);
+}
